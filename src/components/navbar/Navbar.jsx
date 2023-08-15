@@ -13,15 +13,15 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <BiLogoBitcoin />
+        <BiLogoBitcoin className="icon" />
         <span>Admin</span>
       </div>
       <div className="icons">
-        <BiSearchAlt2 />
-        <BiCategory />
-        <BiFullscreen />
+        <BiSearchAlt2 className="icon" />
+        <BiCategory className="icon" />
+        <BiFullscreen className="icon" />
         <div className="notification">
-          <BiBell />
+          <BiBell className="icon" />
           <span>2</span>
         </div>
         <div className="user">
@@ -31,7 +31,7 @@ const Navbar = () => {
           />
           <span>User</span>
         </div>
-        <BiCog />
+        <BiCog className="icon" />
       </div>
     </div>
   );

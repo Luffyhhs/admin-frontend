@@ -1,4 +1,5 @@
 import * as boxIcon from "react-icons/bi";
+
 export const menu = [
   {
     id: 1,
@@ -181,3 +182,105 @@ export const topTopUpUser = [
     amount: "1000000",
   },
 ];
+
+export const chartBoxUser = {
+  color: "#8884d8",
+  icon: <boxIcon.BiBarChartSquare />,
+  title: "Total Users",
+  number: "11,238",
+  dataKey: "users",
+  percentage: 45,
+  chartData: [
+    { name: "Sun", users: 400 },
+    { name: "Mon", users: 600 },
+    { name: "Tue", users: 500 },
+    { name: "Wed", users: 700 },
+    { name: "Thu", users: 400 },
+    { name: "Fri", users: 500 },
+    { name: "Sat", users: 450 },
+  ],
+};
+
+export const chartBoxGames = {
+  color: "skyblue",
+  icon: <boxIcon.BiCartDownload />,
+  title: "Total Products",
+  number: "238",
+  dataKey: "games",
+  percentage: 21,
+  chartData: [
+    { name: "Sun", games: 400 },
+    { name: "Mon", games: 600 },
+    { name: "Tue", games: 500 },
+    { name: "Wed", games: 700 },
+    { name: "Thu", games: 400 },
+    { name: "Fri", games: 500 },
+    { name: "Sat", games: 450 },
+  ],
+};
+
+export const chartBoxIncome = {
+  color: "gold",
+  icon: <boxIcon.BiCreditCard />,
+  title: "Income",
+  number: "5M MMK",
+  dataKey: "games",
+  percentage: 21,
+  chartData: [
+    { name: "Sun", games: 400 },
+    { name: "Mon", games: 600 },
+    { name: "Tue", games: 500 },
+    { name: "Wed", games: 700 },
+    { name: "Thu", games: 400 },
+    { name: "Fri", games: 500 },
+    { name: "Sat", games: 450 },
+  ],
+};
+
+export const chartBoxConversion = {
+  color: "teal",
+  icon: <boxIcon.BiCalculator />,
+  title: "Ratio",
+  number: "2.6",
+  dataKey: "games",
+  percentage: 21,
+  chartData: [
+    { name: "Sun", games: 400 },
+    { name: "Mon", games: 600 },
+    { name: "Tue", games: 500 },
+    { name: "Wed", games: 700 },
+    { name: "Thu", games: 400 },
+    { name: "Fri", games: 500 },
+    { name: "Sat", games: 450 },
+  ],
+};
+
+export const barChartBoxIncome = {
+  title: "Profit Earned",
+  color: "#8884d8",
+  dataKey: "profit",
+  chartData: [
+    { name: "Sun", profit: 5000 },
+    { name: "Mon", profit: 7000 },
+    { name: "Tue", profit: 6000 },
+    { name: "Wed", profit: 5000 },
+    { name: "Thu", profit: 4000 },
+    { name: "Fri", profit: 3000 },
+    { name: "Sat", profit: 4500 },
+  ],
+};
+
+export const barChartBoxVisit = {
+  title: "Total Visits",
+  color: "#FF8042",
+  dataKey: "visit",
+  chartData: [
+    { name: "Sun", visit: 5000 },
+    { name: "Mon", visit: 7000 },
+    { name: "Tue", visit: 6000 },
+    { name: "Wed", visit: 5000 },
+    { name: "Thu", visit: 4000 },
+    { name: "Fri", visit: 3000 },
+    { name: "Sat", visit: 4500 },
+  ],
+};
