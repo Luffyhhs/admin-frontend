@@ -1,12 +1,16 @@
 import Home from "./pages/home/Home";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Users from "./pages/users/Users";
-import Products from "./pages/products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
+import Games from "./pages/games/Games";
+import Units from "./pages/units/Units";
+import Money from "./pages/money/Money";
+import Setting from "./pages/setting/Setting";
+import History from "./pages/history/History";
 
 function App() {
   const Layout = () => {
@@ -39,8 +43,24 @@ function App() {
           element: <Users />,
         },
         {
-          path: "/products",
-          element: <Products />,
+          path: "/units",
+          element: <Units />,
+        },
+        {
+          path: "/games",
+          element: <Games />,
+        },
+        {
+          path: "/money",
+          element: <Money />,
+        },
+        {
+          path: "/setting",
+          element: <Setting />,
+        },
+        {
+          path: "/history",
+          element: <History />,
         },
       ],
     },
