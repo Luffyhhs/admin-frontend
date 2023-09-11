@@ -1,2 +1,49 @@
+@import "../../styles/variables.scss";
+
 .login {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../../assets/imgs/casino_table.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-size: 1.6rem;
+  color: $soft-color;
+
+  &__form {
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // color: $soft-color;
+    background-color: rgba($color: $dark-bg, $alpha: 0.4);
+    // border: 1px solid $soft-bg;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    form {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      label {
+        align-self: flex-start;
+      }
+      input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

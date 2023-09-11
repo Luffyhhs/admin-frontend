@@ -12,21 +12,24 @@ import BarChartBox from "../../components/barChartBox/BarChartBox";
 
 const Home = () => {
   return (
-    <div className="home">
-      <div className="box box1">
-        <ChartBox {...chartBoxConversion} />
-      </div>
-      <div className="box box2">
-        <ChartBox {...chartBoxIncome} />
-      </div>
-      <div className="box box3">
-        <ChartBox {...chartBoxUser} />
-      </div>
+    <>
+      <h1 className="heading">Daily Analytics</h1>
+      <div className="home">
+        <div className="box box1">
+          <ChartBox {...chartBoxConversion} />
+        </div>
+        <div className="box box2">
+          <ChartBox {...chartBoxIncome} />
+        </div>
+        <div className="box box3">
+          <ChartBox {...chartBoxUser} />
+        </div>
 
-      <div className="box box4">
-        <BarChartBox {...barChartBoxVisit} />
+        <div className="box box4">
+          <BarChartBox {...barChartBoxVisit} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

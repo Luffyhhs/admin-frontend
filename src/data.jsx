@@ -1,65 +1,65 @@
 import * as boxIcon from "react-icons/bi";
+import * as faIcon from "react-icons/fa";
+import * as riIcon from "react-icons/ri";
+import * as ioIcon from "react-icons/io";
 
 export const menu = [
   {
     id: 1,
-    title: "main",
-    listItems: [
-      {
-        id: 1,
-        title: "Dashboard",
-        url: "/",
-        icon: <boxIcon.BiHome />,
-      },
-      {
-        id: 2,
-        title: "Units",
-        url: "/units",
-        icon: <boxIcon.BiCoinStack />,
-      },
-    ],
+    title: "Dashboard",
+    url: "/",
+    icon: <boxIcon.BiHome />,
   },
   {
     id: 2,
-    title: "details",
-    listItems: [
+    title: "Units",
+    url: "/createUnits",
+    icon: <boxIcon.BiCoinStack />,
+    iconClosed: <riIcon.RiArrowDownSFill />,
+    iconOpened: <riIcon.RiArrowUpSFill />,
+    subNav: [
       {
-        id: 1,
-        title: "Users",
-        url: "/users",
-        icon: <boxIcon.BiUser />,
+        title: "Create Units",
+        url: "/createUnits",
+        icon: <boxIcon.BiCoinStack />,
       },
       {
-        id: 2,
-        title: "Money",
-        url: "/money",
-        icon: <boxIcon.BiMoneyWithdraw />,
-      },
-      {
-        id: 3,
-        title: "Games",
-        url: "/games",
-        icon: <boxIcon.BiGame />,
+        title: "Units History",
+        url: "/unitsHistory",
+        icon: <boxIcon.BiHistory />,
       },
     ],
   },
   {
     id: 3,
-    title: "Maintenance",
-    listItems: [
-      {
-        id: 1,
-        title: "Settings",
-        url: "/setting",
-        icon: <boxIcon.BiCog />,
-      },
-      {
-        id: 2,
-        title: "History",
-        url: "/history",
-        icon: <boxIcon.BiDetail />,
-      },
-    ],
+    title: "Users",
+    url: "/users",
+    icon: <boxIcon.BiUser />,
+  },
+  {
+    id: 4,
+    title: "Money",
+    url: "/money",
+    icon: <boxIcon.BiMoneyWithdraw />,
+  },
+  {
+    id: 5,
+    title: "Games",
+    url: "/games",
+    icon: <boxIcon.BiGame />,
+  },
+
+  {
+    id: 6,
+    title: "Settings",
+    url: "/setting",
+    icon: <boxIcon.BiCog />,
+  },
+  {
+    id: 7,
+    title: "History",
+    url: "/history",
+    icon: <boxIcon.BiDetail />,
   },
 ];
 

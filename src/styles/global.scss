@@ -32,8 +32,54 @@ a {
 .contentContainer {
   padding: 0.5rem 2rem;
   width: 100%;
+  max-height: 100%;
 }
 
+.heading {
+  margin-bottom: 2rem;
+}
 .icon {
   font-size: 1.8rem;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($dark-color, 0.2);
+  }
+
+  // &:active,
+  // &:focus {
+  //   outline: none;
+  //   transform: translateY(-1px);
+  //   box-shadow: 0 0.5rem 1rem rgba($dark-bg, 0.2);
+  // }
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }

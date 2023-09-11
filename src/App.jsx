@@ -3,7 +3,7 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Users from "./pages/users/Users";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Menu from "./components/menu/Menu";
+
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
 import Games from "./pages/games/Games";
@@ -11,15 +11,27 @@ import Units from "./pages/units/Units";
 import Money from "./pages/money/Money";
 import Setting from "./pages/setting/Setting";
 import History from "./pages/history/History";
+import { useState } from "react";
+import Sidebar from "./components/menu/Sidebar";
+import UnitsHistory from "./pages/units/UnitsHistory";
 
 function App() {
+  const [loginState, setLoginState] = useState(true);
+  const login = (bol) => {
+    setLoginState(bol);
+  };
+  const logout = (bol) => {
+    setLoginState(bol);
+  };
   const Layout = () => {
-    return (
+    return !loginState ? (
+      <Login login={login} />
+    ) : (
       <div className="main">
-        <Navbar />
+        <Navbar logout={logout} />
         <div className="container">
           <div className="menuContainer">
-            <Menu />
+            <Sidebar />
           </div>
           <div className="contentContainer">
             <Outlet />
@@ -43,8 +55,12 @@ function App() {
           element: <Users />,
         },
         {
-          path: "/units",
+          path: "/createUnits",
           element: <Units />,
+        },
+        {
+          path: "/unitsHistory",
+          element: <UnitsHistory />,
         },
         {
           path: "/games",
@@ -65,7 +81,7 @@ function App() {
       ],
     },
     {
-      path: "/login",
+      path: "/",
       element: <Login />,
     },
   ]);
